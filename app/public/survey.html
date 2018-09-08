@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Friend Finder</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img src="https://localhost:3000/assets/images/logo.jpg" alt="logo" height="64px"></a>
+        </div>
+    </nav>
+
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br>
+            <br>
+            <h1 class="header center orange-text">Otaku Friend Finder</h1>
+            <div class="row center"></div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="row left-align">
+        <div class="s12 m12">
+            <div class="card red darken-1">
+                <div class="card-content white-text">
+                    <div class="card-title">
+                        <h2>Survey Questions</h2>
+                    </div>
+                    <div class="card-action">
+                        <h4>First we have a few questions</h4>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col m12">
+                                        <i class="material-icons prefix">assignment_ind</i>
+                                        <input id="userName" type="text" class="validate" required>
+                                        <label for="userName">username (Required)</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="card-content white-text">
+                    <h3>Please rate your interest in the following on a scale of 1 to 5</h3>
+                    <br>
+                    <form name="surveyQuestions" id="surveyQuestions" action="" method="POST">
+                        <h4>Anime</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q1" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q1" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q1" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q1" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q1" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Cosplay</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q2" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q2" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q2" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q2" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q2" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Video Games</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q3" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q3" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q3" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q3" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q3" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Jpop Music</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q4" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q4" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q4" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q4" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q4" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Itasha Cars</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q5" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q5" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q5" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q5" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q5" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Japanese History</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q6" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q6" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q6" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q6" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q6" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Waifu Discussion</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q7" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q7" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q7" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q7" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q7" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Japanese Food/Snacks</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q8" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q8" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q8" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q8" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q8" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Manga</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q9" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q9" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q9" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q9" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q9" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <h4>Lolita Style</h4>
+                        <div class="row">
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q10" value="1">
+                                        <span>1 (Not Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q10" value="2">
+                                        <span>2</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q10" value="3">
+                                        <span>3</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s2">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q10" value="4">
+                                        <span>4</span>
+                                    </label>
+                                </p>
+                            </div>
+
+                            <div class="col s3">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="Q10" value="5">
+                                        <span>5 (Very Interested)</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row center-align">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Our Mission</h5>
+                    <p class="grey-text text-lighten-4">We know some interests are uncommon. Finding people who share these
+                        interests, especially to the same degree, is difficult. Connecting with these people is even more
+                        difficult. We seek to help bridge this gap and eliminate the awkwardness.</p>
+                </div>
+                <div class="col l3 s12"></div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li>
+                            <a class="white-text" href="https://github.com/juicychewc">GitHub</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by
+                <a class="orange-text text-lighten-3" href="https://github.com/juicychewc">Collin Chew</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="./assets/javascript/survey.js"></script>
+
+</body>
+
+</html>
