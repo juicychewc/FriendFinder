@@ -1,3 +1,5 @@
+var friends = require("../../../data/friends")
+
 $(".submit").on("click", function (event) {
     event.preventDefault();
 
@@ -9,12 +11,12 @@ $(".submit").on("click", function (event) {
 
     var newFriend = {
         friendName: $("#userName").val().trim(),
+        //photo link would be in a name:value pair here but no functionality yet
         answers: answersArray
     }
 
     $.post("/api/friends", newFriend, function (data) {
-        if (data) {
-            console.log("display matched friends");
-        }
+        
     });
 });
+
