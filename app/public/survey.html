@@ -19,7 +19,7 @@
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">
-                <img src="https://localhost:3000/assets/images/logo.jpg" alt="logo" height="64px"></a>
+                <img src="/assets/images/logo.jpg" alt="logo" height="64px"></a>
         </div>
     </nav>
 
@@ -46,10 +46,15 @@
                         <div class="row">
                             <form class="col s12">
                                 <div class="row">
-                                    <div class="input-field col m12">
+                                    <div class="input-field col m6">
                                         <i class="material-icons prefix">assignment_ind</i>
                                         <input id="userName" type="text" class="validate" required>
                                         <label for="userName">username (Required)</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">add_a_photo</i>
+                                        <input id="photoLink" type="text" class="validate" required>
+                                        <label for="photoLink">Link an Image (Required)</label>
                                     </div>
                                 </div>
                             </form>
@@ -62,7 +67,7 @@
                     <h3>Please rate your interest in the following on a scale of 1 to 5</h3>
                     <br>
                     <form name="surveyQuestions" id="surveyQuestions" action="" method="POST">
-                        <h4>Anime</h4>
+                        <h4>Anime/Manga</h4>
                         <div class="row">
                             <div class="col s3">
                                 <p>
@@ -454,7 +459,7 @@
                         </div>
                         <br>
 
-                        <h4>Manga</h4>
+                        <h4>Figma Collecting</h4>
                         <div class="row">
                             <div class="col s3">
                                 <p>
@@ -593,6 +598,24 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content less-pad">
+            <div class="row center-align">
+                <div class="col s12 m7 new-width">
+                    <div class="card no-margin positioning">
+                        <div class="card-image new-width">
+                            <img id="matchedUserImage" class="img-position" src="">
+                        </div>
+                        <div class="card-content even-less-pad">
+                            <p>Meet your newest potential friend</p>
+                            <span class="card-title black-text" id="matchedUserName"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="./assets/javascript/survey.js"></script>
